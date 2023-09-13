@@ -1,0 +1,433 @@
+/* peralta-regular - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Peralta';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/peralta-v19-latin-regular.woff2') format('woff2');
+}
+
+body {
+    font-family: 'Peralta';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vH;
+    margin: 0px;
+}
+
+.content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: url("../img/mexican-desert.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-direction: column;
+    gap: 20px;
+}
+
+h1 {
+    font-size: 40px;
+    margin: 0px;
+    color: #973813;
+    text-shadow: 2px 4px 3px rgb(0 0 0 / 49%);
+}
+
+h2 {
+    margin-bottom: 35px;
+    text-shadow: 2px 4px 3px rgb(0 0 0 / 19%);
+}
+
+.mainmenu {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px;
+}
+
+.mainmenu div:hover {
+    cursor: pointer;
+}
+
+div#tooglemenu:hover {
+    cursor: pointer;
+}
+
+div#restartbtn,
+.menuitem {
+    background: #fd9b33;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 15px;
+    border: 1px solid #bd5329;
+    color: #973813;
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.4));
+}
+
+div#restartbtn:hover,
+.menuitem:hover {
+    color: #fc9a3e;
+    background: #963719;
+}
+
+.canvas-section {
+    position: relative;
+}
+
+canvas {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    aspect-ratio: 780 / 480;
+}
+
+div#gameoverscreen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: url('../img/9_intro_outro_screens/game_over/game_over.png');
+    background-size: cover;
+    background-position: center;
+}
+
+div#winningscreen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: url('../img/9_intro_outro_screens/game_over/gameover.png');
+    background-size: cover;
+    background-position: center;
+}
+
+#winningscreen div#restartbtn {
+    margin-top: 80px !important;
+}
+
+canvas.fullscreenmode {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    max-width: unset;
+    max-height: unset;
+    padding: unset !important;
+    margin: unset !important;
+}
+
+.fullscreenmain .mainmenu {
+    position: fixed;
+    top: -10px;
+    right: 0;
+    left: 0;
+    justify-content: center;
+    z-index: 888;
+}
+
+.fullscreenmain div#howtoscreen {
+    height: 100vH;
+}
+
+.fullscreenmain .mobilecontrol {
+    position: fixed;
+    bottom: 0px;
+    right: 0;
+    left: 0;
+    justify-content: center;
+    z-index: 888;
+    background: transparent;
+    gap: 100px;
+}
+
+.fullscreenmain div#winningscreen,
+.fullscreenmain div#gameoverscreen {
+    position: fixed;
+}
+
+div#restartbtn:hover {
+    cursor: pointer;
+}
+
+.mobilecontrol {
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 40px);
+    background: #984313;
+    padding: 0px 20px 10px 20px;
+    margin-top: -7px;
+}
+
+.control-right,
+.control-left {
+    display: flex;
+    gap: 20px;
+}
+
+.mobilecontrol i {
+    display: flex;
+    background: #fd9b33;
+    font-size: 22px;
+    border-radius: 100%;
+    border: 1px solid #bd5329;
+    color: #973813;
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.4));
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    line-height: 1em;
+}
+
+.mobilecontrol i:hover {
+    cursor: pointer;
+}
+
+.innercontent {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    display: flex;
+    width: calc(100% - 160px);
+    height: calc(100% - 160px);
+    padding: 40px;
+    background: #b6602d;
+    flex-direction: column;
+    z-index: 999;
+}
+
+.col2 {
+    display: flex;
+    width: 100%;
+    max-width: 400px;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px dashed #fc9a3e;
+    font-size: 18px;
+}
+
+.innercontent .col2:last-child {
+    border: 0px !important;
+}
+
+.col-right i {
+    font-size: 24px;
+}
+
+a.closebtn {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    line-height: 1em;
+    text-decoration: none;
+    color: #000;
+}
+
+a.closebtn i {
+    display: flex;
+    background: #fd9b33;
+    font-size: 22px;
+    border-radius: 100%;
+    color: #973813;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    line-height: 1em;
+}
+
+a.closebtn i:hover {
+    color: #fd9b33;
+    background: #973813;
+}
+
+div#continue {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 100px;
+    text-align: center;
+    z-index: 888;
+    background: #fd9b33;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 15px;
+    border: 1px solid #bd5329;
+    color: #973813;
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.4));
+}
+
+div#continue:hover {
+    cursor: pointer;
+}
+
+
+/* Smartphones */
+
+@media only screen and (max-width: 760px) {
+    canvas {
+        width: 100%;
+    }
+
+    .innercontent {
+        position: fixed;
+        padding: 15px;
+        top: 15px;
+        left: 15px;
+        width: calc(100% - 60px);
+        height: calc(100% - 60px);
+    }
+}
+
+@media only screen and (min-width: 901px) {
+
+    div#tooglemenu {
+        display: none;
+    }
+
+    div#mainmenu {
+        display: flex !important;
+    }
+
+    canvas {
+        height: calc(100% - 50px);
+        max-width: 720px;
+        max-height: 480px;
+    }
+}
+
+/* Smartphones */
+
+@media only screen and (max-width: 900px) {
+    .mainmenu {
+        position: absolute;
+        top: 20px;
+        z-index: 999;
+        left: 0;
+        right: 0;
+    }
+
+    div#tooglemenu i {
+        display: flex;
+        background: #fd9b33;
+        font-size: 22px;
+        border-radius: 100%;
+        border: 1px solid #bd5329;
+        color: #973813;
+        filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.4));
+        width: 40px;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+        line-height: 1em;
+    }
+
+    div#fullscreen {
+        position: relative;
+    }
+
+    div#introscreen {
+        display: none;
+    }
+
+    div#tooglemenu {
+        position: absolute;
+        right: 15px;
+        top: 10px;
+        z-index: 888;
+    }
+
+    .mobilecontrol {
+        position: absolute;
+        bottom: -45px;
+    }
+
+    canvas#canvas {
+        background-position-y: bottom;
+        background-size: 100%;
+    }
+
+    canvas {
+        padding-top: 66.666666%;
+        margin-top: -66.6666%;
+    }
+
+}
+
+@media (max-width: 768px) and (orientation: portrait) {
+    body:after {
+        position: absolute;
+        z-index: 9999;
+        width: calc(100% - 40px);
+        height: calc(100% - 40px);
+        top: 0;
+        bottom: 0;
+        background: #97421a;
+        background-size: 100% auto;
+        opacity: 0.95;
+        content: "Please rotate your device";
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 34px;
+        text-align: center;
+        padding: 20px;
+    }
+
+    body:before {
+        content: "\f2f1";
+        font-family: 'Font Awesome 5 Free';
+        font-weight: bold;
+        font-size: 40px;
+        z-index: 999999;
+        color: #000;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        top: calc(50% - 95px);
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .mainmenu {
+        flex-direction: column;
+        text-align: center;
+        max-width: 200px;
+        margin-right: auto;
+        margin-left: auto;
+        gap: 10px;
+    }
+}
+
+@media only screen and (max-height: 480px) {
+
+    .canvas-section {
+        position: relative;
+        height: 100vH;
+    }
+
+    canvas {
+        height: calc(100vh - 50px) !important;
+    }
+
+    .mobilecontrol {
+        bottom: 0px;
+    }
+}
